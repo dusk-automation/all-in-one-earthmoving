@@ -25,10 +25,11 @@ Photos (assets/img/): the nine newest photos on the Facebook page plus its cover
     licence and lot number) are softly blurred.
   tipper: number plate pixelated.
   float: the Facebook cover cropped above its "All-In-One Earthmoving" caption and a small editing
-    watermark; the truck's plate pixelated.
+    watermark; the truck's plate pixelated; then upscaled 4x on Higgsfield (Bytedance image upscale,
+    2 credits) to 5793x2160 and saved at 720/1280/2000/2800 px. Shown whole, without a caption.
   excavator-480: the profile picture (only 480 px, so it is used small).
 
-Generated film and stills (Higgsfield, 22 October 2026; labelled "AI-generated film, made for this preview")
+Generated film and stills (Higgsfield, 22 October 2026; the on-page "AI-generated" labels were removed at Luca's request)
   Start frames: GPT Image 2.5 (high, 2k), using three of the business's own excavator photos as
     references (p5 pool dig, p8 pool removal, the profile picture). No text or logos were asked for.
     Golden-hour frame (excavator cutting a bench above sandstone blocks) and dusk frame (excavator
