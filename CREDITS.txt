@@ -1,4 +1,4 @@
-All-In-One Earthmoving: design preview by Dusk (22 October 2026)
+All-In-One Earthmoving: design preview by Dusk (22 October 2026, version 2)
 
 Business's own material
   Facebook page facebook.com/allinoneearthmoving/ (186 followers, "Alstonville NSW", read 22 October 2026):
@@ -28,17 +28,20 @@ Photos (assets/img/): the nine newest photos on the Facebook page plus its cover
     watermark; the truck's plate pixelated.
   excavator-480: the profile picture (only 480 px, so it is used small).
 
-Stock footage (placeholder until a Higgsfield clip is made; labelled "Stock footage, placeholder")
-  assets/video/hero-720.mp4, hero-480.mp4, hero-poster.webp
-    Mixkit free licence, no attribution required:
-    mixkit.co/free-stock-video/excavator-loading-dirt-onto-a-truck-at-a-construction-site-49192/
-    Looped seamlessly (the last second fades into the first), slightly warmed, no sound.
-    1280x720 at 1.9 Mbps (2.8 MB), 854x480 at 0.85 Mbps (1.25 MB). Mixkit offers this clip
-    in 720p only.
-
-To swap in a Higgsfield clip later: replace hero-720.mp4 (and ideally make it 1920x1080),
-  hero-480.mp4 and hero-poster.webp with files of the same names, remove the "Stock footage"
-  line in index.html, and bump the version number (version.txt, var B='N', ?v=N).
+Generated film and stills (Higgsfield, 22 October 2026; labelled "AI-generated film, made for this preview")
+  Start frames: GPT Image 2.5 (high, 2k), using three of the business's own excavator photos as
+    references (p5 pool dig, p8 pool removal, the profile picture). No text or logos were asked for.
+    Golden-hour frame (excavator cutting a bench above sandstone blocks) and dusk frame (excavator
+    on a red-soil pad). Originals in client-sites/_originals/all-in-one-earthmoving/generated/.
+  assets/video/hero-1080.mp4, hero-720.mp4, hero-m.mp4 (upright 540x960 cut for phones),
+    hero-poster.webp, hero-poster-m.webp: Kling 4.0, image-to-video, 10 s, 1080p, with the same
+    frame as start and end so it loops without a jump. Sound removed.
+  assets/machine/d/000-059.webp (1280x720) and m/000-059.webp (854x480), poster.webp:
+    Kling 4.0, 10 s camera orbit from the dusk frame, cut into 60 stills that the page shows
+    in turn as the visitor scrolls.
+  assets/og.jpg: share image rebuilt around the golden-hour frame.
+  Kling 3.0 Pro needs the Plus plan; this account is on Starter, so Kling 4.0 was used.
+  Credits spent: 4 stills x 2.75 + 2 videos x 10 = 31.
 
 Made for this preview: the logo mark (assets/brand/mark.svg: navy from the decal on their boom,
   stepped sandstone blocks, an orange sun), the share image (assets/og.jpg), the strata layer
