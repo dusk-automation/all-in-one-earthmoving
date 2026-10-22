@@ -1,0 +1,45 @@
+All-In-One Earthmoving: design preview by Dusk (22 October 2026)
+
+Business's own material
+  Facebook page facebook.com/allinoneearthmoving/ (186 followers, "Alstonville NSW", read 22 October 2026):
+    intro "All-In-One Earthmoving provides professional machinery, experienced operators and
+    dependable site support across the Northern Rivers", services "Reliable Earthmoving Services,
+    Rock and block retaining walls, Tip truck hire, Float Moves", phone 0488 938 844.
+  Instagram @all_in_one_earthmoving bio: "Professional earthmoving across the Northern Rivers since
+    2007. Excavators, tip trucks, float moves, site works, retaining walls, footings & clearing".
+  Google Maps listing "All-In-One Earthmoving" (Excavating contractor): 4.2 from 5 reviews,
+    451B Pearces Creek Rd, Alstonvale NSW 2477 (the site shows only "Alstonvale NSW 2477"),
+    phone 0414 586 795, Monday to Friday 7 am to 5 pm, Saturday and Sunday closed.
+    Maps link used on the page: maps.google.com/?cid=4291374069449622459
+  Reviews quoted word for word (shortened with "…"), from that Google listing:
+    Wade Ottley (a year ago), Andy Scott (3 years ago, edited), Jonty Thompson (4 years ago).
+    Shown with first name and initial only.
+  iseekplant profile (not claimed by the business, so treated as unconfirmed, nothing taken from it
+    except what other sources also say): owners Damien and Karen Coppola, established 2007,
+    house cuts, footings and piers, land clearing, mulching, swimming pools, rock retaining walls,
+    augering 300-900 mm, excavators with laser levels.
+
+Photos (assets/img/): the nine newest photos on the Facebook page plus its cover and profile picture,
+  all the business's own. Untouched copies are in client-sites/_originals/all-in-one-earthmoving/fb/.
+  wall-house, wall-street, wall-curve: the builder's signs in the windows (company name, phone,
+    licence and lot number) are softly blurred.
+  tipper: number plate pixelated.
+  float: the Facebook cover cropped above its "All-In-One Earthmoving" caption and a small editing
+    watermark; the truck's plate pixelated.
+  excavator-480: the profile picture (only 480 px, so it is used small).
+
+Stock footage (placeholder until a Higgsfield clip is made; labelled "Stock footage, placeholder")
+  assets/video/hero-720.mp4, hero-480.mp4, hero-poster.webp
+    Mixkit free licence, no attribution required:
+    mixkit.co/free-stock-video/excavator-loading-dirt-onto-a-truck-at-a-construction-site-49192/
+    Looped seamlessly (the last second fades into the first), slightly warmed, no sound.
+    1280x720 at 1.9 Mbps (2.8 MB), 854x480 at 0.85 Mbps (1.25 MB). Mixkit offers this clip
+    in 720p only.
+
+To swap in a Higgsfield clip later: replace hero-720.mp4 (and ideally make it 1920x1080),
+  hero-480.mp4 and hero-poster.webp with files of the same names, remove the "Stock footage"
+  line in index.html, and bump the version number (version.txt, var B='N', ?v=N).
+
+Made for this preview: the logo mark (assets/brand/mark.svg: navy from the decal on their boom,
+  stepped sandstone blocks, an orange sun), the share image (assets/og.jpg), the strata layer
+  in the hero and the simplified Northern Rivers map. Fonts: Barlow Condensed and Barlow (Google Fonts).
