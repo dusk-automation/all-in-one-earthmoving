@@ -146,6 +146,12 @@
     var src = (vw <= 720 && vh0 > vw) ? 'data-src-sm' : (px >= 2600 ? 'data-src-xxl' : (px >= 1500 ? 'data-src-xl' : 'data-src-lg'));
     if (src === 'data-src-sm' && video.getAttribute('data-poster-sm')) video.poster = video.getAttribute('data-poster-sm');
     video.src = video.getAttribute(src);
+    // if a file cannot be loaded, step down to the next smaller one
+    var chain = ['data-src-xxl', 'data-src-xl', 'data-src-lg'];
+    video.addEventListener('error', function () {
+      var i = chain.indexOf(src);
+      if (i > -1 && i < chain.length - 1) { src = chain[i + 1]; video.src = video.getAttribute(src); tryPlay(); }
+    });
     video.preload = 'auto';
     var tryPlay = function () {
       if (userPaused) return;
