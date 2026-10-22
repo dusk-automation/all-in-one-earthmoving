@@ -142,7 +142,8 @@
   if (video && motion && !conn.saveData) {
     // phones in portrait get an upright cut of the film; big screens get 1080p
     var vw = window.innerWidth, vh0 = window.innerHeight, dpr = window.devicePixelRatio || 1;
-    var src = (vw <= 720 && vh0 > vw) ? 'data-src-sm' : (vw * dpr >= 2200 ? 'data-src-xl' : 'data-src-lg');
+    var px = vw * dpr;
+    var src = (vw <= 720 && vh0 > vw) ? 'data-src-sm' : (px >= 2600 ? 'data-src-xxl' : (px >= 1500 ? 'data-src-xl' : 'data-src-lg'));
     if (src === 'data-src-sm' && video.getAttribute('data-poster-sm')) video.poster = video.getAttribute('data-poster-sm');
     video.src = video.getAttribute(src);
     video.preload = 'auto';
@@ -238,14 +239,20 @@
   }
   function loadFrames() {
     if (mLoaded || !mCount) return; mLoaded = true;
-    var set = window.innerWidth <= 720 ? 'm' : 'd';
-    for (var i = 0; i < mCount; i++) {
+    // phones get 1280 px stills, desktops 1920, sharp or very wide screens 2560
+    var px = window.innerWidth * (window.devicePixelRatio || 1);
+    var set = window.innerWidth <= 720 ? 'm' : (px >= 2600 ? 'x' : 'd');
+    // every sixth still first, so scrolling works at once, then the ones in between
+    var order = [];
+    for (var a = 0; a < mCount; a += 6) order.push(a);
+    for (var b = 0; b < mCount; b++) if (b % 6) order.push(b);
+    order.forEach(function (i) {
       var img = new Image();
       img.decoding = 'async';
-      img.onload = function () { if (mLast < 0) { renderMachine(window.innerHeight, true); } };
+      img.onload = function () { mLast = -1; renderMachine(window.innerHeight, true); };
       img.src = 'assets/machine/' + set + '/' + String(i).padStart(3, '0') + '.webp';
-      mFrames.push(img);
-    }
+      mFrames[i] = img;
+    });
   }
   function ready(img) { return img && img.complete && img.naturalWidth > 0; }
   function drawFrame(i, p) {
